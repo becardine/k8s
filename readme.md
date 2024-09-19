@@ -33,6 +33,12 @@
 - ConfigMaps can be used to store fine-grained information like individual properties or coarse-grained information like config files or JSON blobs
 - Volumes can be used to mount ConfigMaps into the pod
 
+## Secrets
+
+- Secrets are similar to ConfigMaps, but are used to store sensitive information
+- Secrets are stored in tmpfs and are only available to the node where the pod is running
+- Secrets are base64 encoded, but not encrypted
+
 ## VS Code
 
 - Install the Kubernetes extension by Microsoft

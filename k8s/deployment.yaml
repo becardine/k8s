@@ -22,9 +22,11 @@ spec:
         envFrom:
         - configMapRef:
             name: "go-server-config"
-            volumesMounts:
-            - name: "go-server-config"
-              mountPath: "/etc/config"
+        - secretRef:
+            name: "go-server-secret"
+        volumesMounts:
+          - name: "go-server-config"
+            mountPath: "/etc/config"
         # env:
         # - name: "PORT"
         #   valueFrom:
