@@ -7,9 +7,10 @@ metadata:
 spec:
   selector: # This is the label that the service will use to find the pods it will route traffic to
     app: "go-server"
-  type: "ClusterIP" # This is the type of service that we are creating. ClusterIP is the default type of service
+  type: LoadBalancer # This is the type of service that we are creating. ClusterIP is the default type of service
   ports:
     - name: "go-server-service"
       protocol: "TCP"
       port: 80 # This is the port that the service will listen on
+      nodePort: 30001 # This is the port that the service will listen on
       targetPort: 8080 # This is the port that the container is listening on

@@ -23,7 +23,9 @@
 ## Services
 - service != container
 - Expose a pod to the outside world (or other pods)
-- clusterIP (default): Exposes the service on a cluster-internal IP
+- ClusterIP (default): Exposes the service on a cluster-internal IP
+- NodePort: Exposes the service on each Node's IP at a static port
+- LoadBalancer: Exposes the service externally using a cloud provider's load balancer
 
 ## VS Code
 
