@@ -27,6 +27,12 @@
 - NodePort: Exposes the service on each Node's IP at a static port
 - LoadBalancer: Exposes the service externally using a cloud provider's load balancer
 
+## ConfigMaps
+
+- ConfigMaps allow you to decouple configuration artifacts from image content to keep containerized applications portable
+- ConfigMaps can be used to store fine-grained information like individual properties or coarse-grained information like config files or JSON blobs
+- Volumes can be used to mount ConfigMaps into the pod
+
 ## VS Code
 
 - Install the Kubernetes extension by Microsoft

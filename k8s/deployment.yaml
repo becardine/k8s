@@ -22,6 +22,9 @@ spec:
         envFrom:
         - configMapRef:
             name: "go-server-config"
+            volumesMounts:
+            - name: "go-server-config"
+              mountPath: "/etc/config"
         # env:
         # - name: "PORT"
         #   valueFrom:
@@ -38,3 +41,11 @@ spec:
         #     configMapKeyRef:
         #       name: "go-server-config"
         #       key: "VERSION"
+        volumes:
+        - name: "go-server-config"
+          configMap:
+            name: "go-server-config"
+            items:
+            - key: peoples
+              path: peoples.json
+
