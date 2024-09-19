@@ -19,3 +19,22 @@ spec:
         image: "becardine/hello-go:latest"
         ports:
         - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: "go-server-config"
+        # env:
+        # - name: "PORT"
+        #   valueFrom:
+        #     configMapKeyRef:
+        #       name: "go-server-config"
+        #       key: "PORT"
+        # - name: "MESSAGE"
+        #   valueFrom:
+        #     configMapKeyRef:
+        #       name: "go-server-config"
+        #       key: "MESSAGE"
+        # - name: "VERSION"
+        #   valueFrom:
+        #     configMapKeyRef:
+        #       name: "go-server-config"
+        #       key: "VERSION"
