@@ -16,9 +16,12 @@
 - kubectl rollout undo deployment <deployment-name>: Undo a last revision of a deployment
 - kubectl rollout undo deployment <deployment-name> --to-revision=<revision>: Undo a specific revision of a deployment
 
-
 > [!CAUTION]
-> Ao atualizar um replica set, os pods só serão atualizados quando for deletado todos os pods do replica set antigo. Para resolver isso, utilizar o deployment.
+> When updating a replica set, the pods will only be updated when all the pods from the old replica set are deleted. To resolve this, use the deployment.
+
+## Services
+- Expose a pod to the outside world (or other pods)
+- clusterIP (default): Exposes the service on a cluster-internal IP
 
 ## VS Code
 

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "go-server-service"
+  labels:
+    app: "go-server-service"
+spec:
+  selector: # This is the label that the service will use to find the pods it will route traffic to
+    app: "go-server"
+  type: "ClusterIP" # This is the type of service that we are creating. ClusterIP is the default type of service
+  ports:
+    - name: "go-server-service"
+      protocol: "TCP"
+      port: 80
+      targetPort: 8080
