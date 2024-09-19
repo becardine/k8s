@@ -1,5 +1,6 @@
 ## Commands
 
+- kubectl proxy --port=<port>: Start a proxy to the Kubernetes API server
 - kubectl get nodes: List all nodes
 - kubectl config get-clusters: List all clusters
 - kubectl config use-context <context>: Set the current-context
@@ -20,6 +21,7 @@
 > When updating a replica set, the pods will only be updated when all the pods from the old replica set are deleted. To resolve this, use the deployment.
 
 ## Services
+- service != container
 - Expose a pod to the outside world (or other pods)
 - clusterIP (default): Exposes the service on a cluster-internal IP
 
